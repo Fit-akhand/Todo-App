@@ -1,42 +1,163 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ==========================================
+   🌟 PREMIUM LIGHT NEUMORPHISM (NOT WHITE)
+   Constant Color • Soft Blue Tint • Modern
+   ========================================== */
+
+/* Global background tint */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #8cb2df;      /* soft blue-grey */
+  color: #55779a;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Page wrapper */
+.main-container {
+  min-height: 100vh;
+  padding: 40px 0;
+  background: #a9c2e0;      /* consistent tint */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Main card container */
+.neu-box {
+  background: #75abdf;      /* soft grey-blue (NOT white) */
+  border-radius: 20px;
+  padding: 26px;
+
+  box-shadow:
+    10px 10px 22px #bcc2c7,
+    -10px -10px 22px #ffffff;
+
+  transition: 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.neu-box:hover {
+  transform: translateY(-3px);
 }
 
-.card {
-  padding: 2em;
+/* ============================
+   ✏ NEUMORPHIC INPUT FIELD
+   ============================ */
+.todo-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  font-size: 16px;
+
+  background: #edf1f5;
+
+  box-shadow:
+    inset 5px 5px 10px #c5cacf,
+    inset -5px -5px 10px #ffffff;
+
+  transition: 0.25s ease;
+  color: #2c3e50;
 }
 
-.read-the-docs {
-  color: #888;
+.todo-input:focus {
+  box-shadow:
+    inset 3px 3px 8px #c5cacf,
+    inset -3px -3px 8px #ffffff;
+}
+
+/* ============================
+   ➕ ADD BUTTON (Soft Blue)
+   ============================ */
+.add-btn {
+  padding: 13px 18px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+
+  background: #edf1f5;
+  color: #3a7bd5;         /* soft premium blue */
+
+  box-shadow:
+    6px 6px 14px #c5cacf,
+    -6px -6px 14px #ffffff;
+
+  transition: 0.25s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  color: #2e63ad;
+  box-shadow:
+    3px 3px 8px #c5cacf,
+    -3px -3px 8px #ffffff;
+}
+
+/* ============================
+   📝 TODO CARD
+   ============================ */
+.todo-card {
+  background: #bacee3;
+  border-radius: 16px;
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow:
+    8px 8px 18px #537394,
+    -8px -8px 18px #537394;
+
+  transition: 0.25s ease;
+  color: #2c3e50;
+}
+
+.todo-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Completed text */
+.todo-completed {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+/* ============================
+   🎛 ICON BUTTONS
+   ============================ */
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #edf1f5;
+  color: #2c3e50;
+
+  box-shadow:
+    5px 5px 12px #c5cacf,
+    -5px -5px 12px #ffffff;
+
+  transition: 0.25s ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    3px 3px 10px #c5cacf,
+    -3px -3px 10px #ffffff;
+}
+
+/* Delete hover */
+.icon-btn.delete:hover {
+  color: #d33a2c;
+}
+
+/* Checkbox tint */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #76d48b;  /* soft green */
 }
